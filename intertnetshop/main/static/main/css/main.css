@@ -51,14 +51,19 @@ ul, li{
 	margin-right: 5px;
 }
 
-.search{	
-	background: #273141;
-	color: #B2B3B4;
-	width: 355px;
-	height: 32px;
-	border:  2px solid #B2B3B4;
+.search{
 	display: flex;
-	align-items: center;
+    align-items: center;
+}
+
+.text-search{
+    box-sizing: border-box;
+    background: #20242A;
+    border: 1px solid #B2B3B4;
+    width: 360px;
+    height: 36px;
+    padding-left: 15px;
+    font-size: 15px;
 }
 
 .search p{
@@ -136,14 +141,57 @@ a.btn:hover{
 
 
 
+.section{
+    height: 3000px;
+}
 
-.first_block{
+.containers{
+    height: 2000px;
+}
+
+.first-block{
 	width: 1170px;
-	height: 461px;
+	height: 900px;
 	margin: 0 auto;
 }
 
-.first_slaider{
-	width: 1200px;
-	height: 401px;
+.first-block img{
+    width: 270px;
+    height: 401px;
+    padding-right: 30px;
 }
+
+.sales-hits-top{
+    height: 401px;
+    display: flex;
+    padding-bottom:25px;
+}
+
+.sales-hits-bottom{
+    height: 401px;
+    display: flex;
+}
+
+.second-block{
+	width: 1170px;
+	height: 900px;
+	margin: 0 auto;
+}
+
+.second-block img{
+    width: 270px;
+    height: 401px;
+    padding-right: 30px;
+}
+
+.new-top{
+    height: 401px;
+    display: flex;
+    padding-bottom:25px;
+}
+
+.new-bottom{
+    height: 401px;
+    display: flex;
+}
+

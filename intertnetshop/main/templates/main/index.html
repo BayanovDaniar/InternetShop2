@@ -21,12 +21,15 @@
 						Каталог
 					</p>
 				</a>
-				<div class="search">	
-					<p>
-						Искать товары
-					</p>			
-				</div>
+				<div class="search">
+                    <p><input name="search-string" placeholder="Искать товары" class="text-search"></p>
+                </div>
 				<ul class="menu">
+					<li>
+						<a href="#">
+							<img src="{% static 'main/img/home.svg' %}">
+						</a>
+					</li>
 					<li>
 						<a href="#">
 							<img src="{% static 'main/img/tiles2_hd.svg' %}">
@@ -73,40 +76,72 @@
 	</header>
 	<section>
 		<div class="containers">
-			<div class="first_block">
+			<div class="first-block">
 				<h2> Хиты продаж </h2>
-				<div class="first_slaider">
-					
-					
+				<div class="sales-hits-top">
+					<a href="#">
+						<img class="sales-hits-top1" src="{% static 'main/img/genshin_raiden.jpg' %}">
+					</a>
+					<a href="#">
+						<img class="sales-hits-top2" src="{% static 'main/img/genshin_raiden.jpg' %}">
+					</a>
+					<a href="#">
+						<img class="sales-hits-top3" src="{% static 'main/img/genshin_raiden.jpg' %}">
+					</a>
+					<a href="#">
+						<img class="sales-hits-top4" src="{% static 'main/img/genshin_raiden.jpg' %}">
+					</a>
+				</div>
+				<div class="sales-hits-bottom">
+					<a href="#">
+						<img class="sales-hits-bottom1" src="{% static 'main/img/genshin_raiden.jpg' %}">
+					</a>
+					<a href="#">
+						<img class="sales-hits-bottom2" src="{% static 'main/img/genshin_raiden.jpg' %}">
+					</a>
+					<a href="#">
+						<img class="sales-hits-bottom3" src="{% static 'main/img/genshin_raiden.jpg' %}">
+					</a>
+					<a href="#">
+						<img class="sales-hits-bottom4" src="{% static 'main/img/genshin_raiden.jpg' %}">
+					</a>
+				</div>
+			</div>
+			<div class="second-block">
+				<h2> Новинки </h2>
+				<div class="new-top">
+					<a href="#">
+						<img class="sales-hits-top1" src="{% static 'main/img/genshin_raiden.jpg' %}">
+					</a>
+					<a href="#">
+						<img class="sales-hits-top2" src="{% static 'main/img/genshin_raiden.jpg' %}">
+					</a>
+					<a href="#">
+						<img class="sales-hits-top3" src="{% static 'main/img/genshin_raiden.jpg' %}">
+					</a>
+					<a href="#">
+						<img class="sales-hits-top4" src="{% static 'main/img/genshin_raiden.jpg' %}">
+					</a>
+				</div>
+				<div class="new-bottom">
+					<a href="#">
+						<img class="sales-hits-bottom1" src="{% static 'main/img/genshin_raiden.jpg' %}">
+					</a>
+					<a href="#">
+						<img class="sales-hits-bottom2" src="{% static 'main/img/genshin_raiden.jpg' %}">
+					</a>
+					<a href="#">
+						<img class="sales-hits-bottom3" src="{% static 'main/img/genshin_raiden.jpg' %}">
+					</a>
+					<a href="#">
+						<img class="sales-hits-bottom4" src="{% static 'main/img/genshin_raiden.jpg' %}">
+					</a>
 				</div>
 			</div>
 		</div>
-
 	</section>
 	<footer>
 		
 	</footer>
-	<!-- <div>
-		<h1><span style="color: blue;">Пункт</span>1</h1>
-		<h2>Пункт 2</h2>
-		<h3>Пункт 3</h3>
-		<h4>Пункт 4</h4>
-		<h5>Пункт 5</h5>
-		<h6>Пункт 6</h6>
-	</div>
-	<body text="#F00000" bgcolor="gray">
-	<p1>апар</p1>
-	<p>Сайт блин</p>
-	<a href="https://vk.com/0negin" target="_blank">Пидр</a>
-	<img src="img/tiles1_hd.svg" alt="">
-	<ul>
-		<li>Пункт 1</li>
-		<li>Пункт 2</li>
-		<li>Пункт 3</li>
-	</ul>
-	<p>
-		Вау какая красота
-	</p>.
- -->
 </body>
 </html>
