@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сука ебанная страница регистрации</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'pageregistration/css/main.css'%}">
+</head>
+<body>
+    <div class="template-section">
+        <div class="full-height">
+            <div class="container">
+                <div class="container-top-enter">
+                    <p>Войти</p>
+                </div>
+                <div class="container-login">
+                    <p><input type="button" class="btn-google" value="Войти через Google"></p>
+                </div>
+                <div class="container-or">
+                    <p class="or">или</p>
+                </div>
+                <div class="container-email">
+                    <p><input name="email" placeholder="Email" class="text-email"></p>
+                </div>
+                <div class="container-password">
+                    <p><input name="password" placeholder="Пароль" class="text-password"></p>
+                </div>
+                <div class="container-bottom-enter">
+                    <p><input type="button" class="btn-enter" value="Войти"></p>
+                </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

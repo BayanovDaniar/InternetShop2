@@ -1,0 +1,144 @@
+.body{
+	padding: 0;
+	margin: 0;
+	color: #FFF;
+	font-size: 15px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	background-color: #1F252E;
+}
+
+ul, li{
+	display: block;
+}
+
+.template-section{
+    padding-top: 203px;
+    padding-bottom: 217px;
+    background-color: #2C313A;
+}
+
+.full-height{
+    width: 480px;
+    margin: 0 auto;
+}
+
+.container{
+    height: 480px;
+    background: #20242A;
+    border-radius: 14px;
+}
+
+.container-top-enter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 59px;
+    padding-bottom: 21px;
+    height: 38px;
+}
+
+.container-top-enter p{
+    color: #FFF;
+    text-decoration: none;
+    font-size: 20px;
+    padding-top: 59px;
+    font-size: 20px;
+}
+
+.container-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 47px;
+    padding-top: 21px;
+}
+
+.container-or{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 12px;
+    height: 27px;
+}
+
+.container-email{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 12px;
+    height: 47px;
+}
+
+.container-password{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 12px;
+    height: 47px;
+}
+
+.container-bottom-enter{
+    display: flex;
+    items-align: center;
+    justify-content: center;
+    padding-top: 25px;
+    height: 47px;
+}
+
+.btn-google{
+    width: 365px;
+    height: 47px;
+    font-size: 15px;
+    background: #D9D9D9;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.or{
+    color: #FFF;
+    font-size: 14px;
+}
+
+.text-email{
+    color:#20242A;
+    box-sizing: border-box;
+    border: 1px solid #FFF;
+    width: 365px;
+    height: 47px;
+    padding-left: 15px;
+    font-size: 15px;
+    display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #20242A;
+}
+
+.text-password{
+    box-sizing: border-box;
+    background: #20242A;
+    border: 1px solid #FFF;
+    width: 365px;
+    height: 47px;
+    padding-left: 15px;
+    font-size: 15px;
+    display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #20242A;
+}
+
+.btn-enter{
+    box-sizing: border-box;
+    color: #2AC3D8;
+    width: 134px;
+    height: 43px;
+    font-size: 15px;
+    background: #20242A;
+    border: 1px solid #7AE7FF;
+    display: flex;
+    align-items;
+    justify-content: center;
+}
