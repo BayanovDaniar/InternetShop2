@@ -1,4 +1,4 @@
-.body{
+body{
 	padding: 0;
 	margin: 0;
 	color: #FFF;
@@ -6,10 +6,6 @@
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 400;
 	background-color: #1F252E;
-}
-
-ul, li{
-	display: block;
 }
 
 .template-section{
