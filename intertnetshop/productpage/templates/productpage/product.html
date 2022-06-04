@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Product</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="{% static 'productpage/css/product.css'%}">
+</head>
+<body>
+    <header>
+
+    </header>
+    <section class="main_information">
+
+        <div class="pictures">
+            <div class="main_picture">
+                <img style='height: 100%; width: 100%; object-fit: contain' src="{% static 'productpage/img/main_pic.png'%}">
+            </div>
+            <div class="picture_list">
+
+            </div>
+        </div>
+
+        <div class="info">
+            <div class="item_name">
+                <h1>Смартфон Apple iPhone 11 128Gb</h1>
+            </div>
+            <div class="price">
+                <h1>53 999Р</h1>
+            </div>
+            <div class="options">
+                <button id="checkout">Купить</button>
+                <button id="add-to-cart">В корзину</button>
+            </div>
+
+        </div>
+
+    </section>
+    <section>
+        <div class="features">
+            <h2 id="feature">Характеристики</h2>
+            <div class="lower-features">
+                <div class="column">Операционная система</div>
+                <div class="value">Android</div>
+            </div>
+            <div class="lower-features">
+                <div class="column">Процессор</div>
+                <div class="value">Snapdragon 855</div>
+            </div>
+            <div class="lower-features">
+                <div class="column">Встроенная память</div>
+                <div class="value">Snapdragon 855</div>
+            </div>
+            <div class="lower-features">
+                <div class="column">Процессор</div>
+                <div class="value">Snapdragon 855</div>
+            </div>
+
+        </div>
+    </section>
+</body>
+</html>
