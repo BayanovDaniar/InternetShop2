@@ -9,4 +9,5 @@ urlpatterns = [
     path('', include('main.urls')),
     path('item', include('pageitem.urls')),
     path('reg', include('pageregistration.urls')),
+    path('lovers', include('pagelovers.urls')),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
