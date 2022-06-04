@@ -21,6 +21,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'pageitem',
     'main',
     'django.contrib.admin',
     'django.contrib.auth',
