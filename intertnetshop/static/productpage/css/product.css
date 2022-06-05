@@ -9,9 +9,70 @@ body{
 }
 
 header {
-    height: 140px;
-    width: 90%;
+    position: relative;
     margin: auto;
+    height: 120px;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+#catalog-btn {
+    cursor: pointer;
+    border: none;
+	background: #24B8D9;
+	width: 130px;
+	height: 46px;
+	margin-right: 24px;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	color: #FFF;
+    transition: opacity 0.25s;
+}
+#catalog-btn:hover {
+    opacity: 0.8;
+}
+
+#catalog-text {
+   font-size: 15px;
+   margin: auto;
+}
+.search{
+	display: flex;
+    align-items: center;
+}
+.text-search{
+    color: #FFF;
+    box-sizing: border-box;
+    background: #20242A;
+    border: 1px solid #B2B3B4;
+    width: 360px;
+    height: 36px;
+    padding-left: 15px;
+    font-size: 15px;
+
+}
+.menu-btn {
+    display: flex;
+    justify-content: space-between;
+    width: 15%;
+
+}
+
+.phone{
+	margin-left:  15%;
+	display: flex;
+	align-items: center;
+}
+.tel{
+	color: #FFF;
+	text-decoration: none;
+	margin-left: 13px;
 }
 section {
     width: 90%;
@@ -21,7 +82,6 @@ section {
 
 .main_information {
     position: relative;
-
     display: flex;
 
 }
