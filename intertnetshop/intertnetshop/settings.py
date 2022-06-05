@@ -23,6 +23,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'productpage',
     'pagelovers',
+    'pagelogin',
     'pageregistration',
     'pageitem',
     'main',

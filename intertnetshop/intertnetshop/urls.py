@@ -11,4 +11,5 @@ urlpatterns = [
     path('item', include('pageitem.urls')),
     path('reg', include('pageregistration.urls')),
     path('lovers', include('pagelovers.urls')),
-]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    path('login',include('pagelogin.urls')),
+]+static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
