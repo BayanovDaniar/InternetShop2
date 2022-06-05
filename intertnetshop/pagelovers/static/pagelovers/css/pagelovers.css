@@ -1,0 +1,169 @@
+body{
+	padding: 0;
+	margin: 0;
+	color: #FFF;
+	font-size: 15px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	background-color: #1F252E;
+}
+
+ul, li{
+	display: block;
+}
+
+.header{
+	padding-top: 57px;
+	padding-bottom: 25px;
+	background-size: 1600px 725px;
+	background-color: #181E27;
+}
+
+.container{
+	width: 1170px;
+	margin: 0 auto;
+}
+
+.nav{
+	display: flex;
+	align-items: center;
+	height: 46px;
+}
+
+.menu{
+	display: flex;
+}
+
+.btn{
+	background: #24B8D9;
+	width: 117px;
+	height: 46px;
+	margin-right: 24px;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	color: #FFF;
+}
+
+.btn img{
+	margin-left: 9px;
+	margin-right: 5px;
+}
+
+.search{
+	background: #273141;
+	color: #B2B3B4;
+	width: 355px;
+	height: 32px;
+	border:  2px solid #B2B3B4;
+	display: flex;
+	align-items: center;
+}
+
+.search p{
+	margin-left: 10px;
+}
+
+.menu li{
+	margin-right: 23px;
+}
+
+.tel{
+	color: #FFF;
+	text-decoration: none;
+	margin-left: 13px;
+}
+
+.phone{
+	margin-left:  auto;
+	display: flex;
+	align-items: center;
+}
+
+a.tel:hover{
+	color: #7AE7FF;
+	transition: 0.8s;
+}
+
+a.btn:hover{
+	color: #7AE7FF;
+	transition: 0.8s;
+}
+
+
+
+
+.block{
+	width: 1170px;
+	height: 564px;
+	margin-top: 33px;
+	display: flex;
+}
+
+.img_left{
+	width: 800px;
+	height: 564px;
+	margin-right: 44px;
+}
+
+.right_top{
+	width: 326px;
+	height: 256px;
+	margin-bottom: 52px;
+}
+
+.right_bottom{
+	width: 326px;
+	height: 256px;
+}
+
+
+
+
+
+
+.first_block{
+	width: 1170px;
+	height: 461px;
+	margin: 0 auto;
+}
+
+.first_slaider{
+	width: 1200px;
+	height: 401px;
+}
+
+.cart{
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 32px;
+}
+.basket{
+    color: -webkit-link;
+    cursor: pointer;
+    margin-top:-9.5px;
+}
+.tovar{
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 32px;
+}
+.button-shop{
+    overflow:hidden;
+    width:100%;
+    max-weight:222%;
+    margin-right:auto;
+    margin-left:auto;
+    padding-top:15px;
+    padding-bottom: 17px;
+    background-color: #c43145;
+    -webkit-transition: all 555ms ease;
+    transition: all 555ms ease;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+ }
+.button-shop:hover{
+    background-color: #e99b04;
+}
