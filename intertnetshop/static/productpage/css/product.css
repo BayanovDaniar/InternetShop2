@@ -9,14 +9,23 @@ body{
 }
 
 header {
-    position: relative;
+    position: fixed;
+    height: 100px;
+    width: 100%;
+    z-index: 1;
+    background-color: grey;
+
+}
+
+
+.header-fixed {
     margin: auto;
-    height: 120px;
+    height: 100%;
     width: 80%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    background-color: grey;
 }
 
 
@@ -82,6 +91,7 @@ section {
 
 .main_information {
     position: relative;
+    padding-top: 150px;
     display: flex;
 
 }
