@@ -16,5 +16,5 @@ class ProductDetailView(DetailView):
         return super().dispatch(request, *args, *kwargs)
 
     context_object_name = 'product'
-    template_name = 'product_detail.html'
+    template_name = 'product.html'
     slug_url_kwarg = 'slug'

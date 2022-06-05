@@ -1,17 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
-
-
-{% if product.category.slug == 'notebook'%}
-    {% include 'notebook_specification.html'%}
-{%else%}
-    {% include 'smartphone_specification.html'%}
-{% endif %}
+            <div class="lower-features">
+                <div class="column">Диагональ</div>
+                <div class="value">{{product.diagonal}}</div>
+            </div>
+            <div class="lower-features">
+                <div class="column">Тип дисплея</div>
+                <div class="value">{{product.diagonal}}</div>
+            </div>
+            <div class="lower-features">
+                <div class="column">Разрешение экрана</div>
+                <div class="value">{{product.resolution}}</div>
+            </div>
+            <div class="lower-features">
+                <div class="column">Заряд аккумулятор</div>
+                <div class="value">{{product.accum_volume}}</div>
+            </div>
+            <div class="lower-features">
+                <div class="column">Оперативная память</div>
+                <div class="value">{{product.ram}}</div>
+            </div>
+            <div class="lower-features">
+                <div class="column">Тип дисплея</div>
+                <div class="value">{{product.diagonal}}</div>
+            </div>
