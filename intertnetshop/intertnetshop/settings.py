@@ -23,6 +23,7 @@ INSTALLED_APPS = [
     'productpage',
     'mainapp',
     'pagelovers',
+    'pagelogin',
     'pageregistration',
     'pageitem',
     'main',

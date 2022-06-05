@@ -11,9 +11,6 @@ urlpatterns = [
     path('item', include('pageitem.urls')),
     path('reg', include('pageregistration.urls')),
     path('lovers', include('pagelovers.urls')),
+    path('login',include('pagelogin.urls')),
     path('test', include('mainapp.urls'))
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-
-if settings.DEBUG:
-    urlpatterns += static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
