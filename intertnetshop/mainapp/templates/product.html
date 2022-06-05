@@ -1,4 +1,5 @@
 {% load static %}
+{% load specification%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,11 +45,13 @@
     <section>
         <div class="features">
             <h2 id="feature">Характеристики</h2>
-                {% if product.category.slug == 'notebook'%}
-                    {% include 'notebook_specification.html'%}
-                {%else%}
-                    {% include 'smartphone_specification.html'%}
-                {% endif %}
+
+                    {{product|product_spec}}
+<!--                {% if product.category.slug == 'notebook'%}-->
+<!--                    {% include 'notebook_specification.html'%}-->
+<!--                {%else%}-->
+<!--                    {% include 'smartphone_specification.html'%}-->
+<!--                {% endif %}-->
         </div>
     </section>
 </body>
