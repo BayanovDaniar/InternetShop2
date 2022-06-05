@@ -9,30 +9,85 @@
 </head>
 <body>
     <header>
-         <button id="allcart"><img class="cart"  src="{% static 'pageitem/img/Cart.png'%}"></button>
+         <button id="allcart"><img class="cart"  src="{% static 'pageitem/img/Cart.png'%}" >
+             <a class="qwe" data-w-id="e02848ac-c68e-5630-e51e-8e778b9c5320"  href="#" >
+                 <div class="shop-nomber">
+                     <div></div>
+                 </div>
+             </a>
+         </button>
     </header>
     <section class="box">
         <div class="card">
-            <img src="{% static 'pageitem/img/Note.jpg'%}" alt="Notebook" style="width:100%">
-            <p class="itemname" href="#">Honor Laptop</p>
-            <p class="price">$799.99</p>
-            <p>Was presented in 2021 as a most powerful laptop of the year</p>
-            <button><<img class="cart" src="{% static 'pageitem/img/Cart.png'%}"></button>
+            <img src="{% static 'pageitem/img/MasBook.jpg'%}" alt="Notebook" style="width:100%">
+            <p class="itemname" href="#">MacBook Air</p>
+            <p class="price">$999.99</p>
+            <p>Was presented in 2022 as a most powerful laptop of the year</p>
+            <div class="product__quantity"></div>
+            <button class="button" data-sb-id-or-vendor-code="036"
+  								data-sb-product-name="MacBook Air"
+							  	data-sb-product-price="999.99"
+								data-sb-product-quantity="1"
+								data-sb-product-img="main/img/apple.png"
+								href="#"><img class="cart" src="{% static 'pageitem/img/Cart.png'%}"></button>
         </div>
         <div class="card">
-            <img src="{% static 'pageitem/img/Note.jpg'%}" alt="Notebook" style="width:100%">
-            <p class="itemname" href="#">Honor Laptop</p>
-            <p class="price">$799.99</p>
+            <img src="{% static 'pageitem/img/acer.jpg'%}" alt="Notebook" style="width:100%">
+            <p class="itemname" href="#">Acer Nitro 5</p>
+            <p class="price">$899.99</p>
             <p>Was presented in 2021 as a most powerful laptop of the year</p>
-            <button><<img class="cart" src="{% static 'pageitem/img/Cart.png'%}"></button>
+            <div class="product__quantity"></div>
+            <button class="button" data-sb-id-or-vendor-code="037"
+  								data-sb-product-name="Acer Nitro 5"
+							  	data-sb-product-price="899.99"
+								data-sb-product-quantity="1"
+								data-sb-product-img="main/img/apple.png"
+								href="#"><img class="cart" src="{% static 'pageitem/img/Cart.png'%}"></button>
         </div>
         <div class="card">
-            <img src="{% static 'pageitem/img/Note.jpg'%}" alt="Notebook" style="width:100%">
+            <img src="{% static 'pageitem/img/honor.jpg'%}" alt="Notebook" style="width:100%">
             <p class="itemname" href="#">Honor Laptop</p>
             <p class="price">$799.99</p>
-            <p>Was presented in 2021 as a most powerful laptop of the year</p>
-            <button><<img class="cart" src="{% static 'pageitem/img/Cart.png'%}"></button>
+            <p>Was presented in 2020 as a most powerful laptop of the year</p>
+            <div class="product__quantity"></div>
+            <button class="button" data-sb-id-or-vendor-code="038"
+  								data-sb-product-name="Honor Laptop"
+							  	data-sb-product-price="799.99"
+								data-sb-product-quantity="1"
+								data-sb-product-img="pageitem/img/изображение_2022-06-05_221425294.png"
+								href="#"><img class="cart" src="{% static 'pageitem/img/Cart.png'%}"></button>
         </div>
     </section>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<link rel="stylesheet" href="{% static 'pageitem/smartbasket/css/smartbasket.min.css'%}">
+
+<div class="smart-basket__wrapper"></div>
+
+<script src="{% static './pageitem/smartbasket/js/smartbasket.min.js'%}"></script>
+
+	<script>
+		$(function () {
+			$('.smart-basket__wrapper').smbasket({
+				productElement: 'box',
+				buttonAddToBasket: 'button',
+				productPrice: 'price',
+				productSize: 'product__size-element',
+
+				productQuantityWrapper: 'product__quantity',
+				smartBasketMinArea: 'qwe',
+				countryCode: '+7',
+				smartBasketCurrency: '$',
+				smartBasketMinIconPath: './static/pageitem/smartbasket/img/shopping-basket-wight.svg',
+
+				agreement: {
+					isRequired: true,
+					isChecked: true,
+					isLink: 'https://artstranger.ru/privacy.html',
+				},
+				nameIsRequired: false,
+			});
+		});
+	</script>
 </body>
 </html>

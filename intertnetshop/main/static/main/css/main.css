@@ -195,3 +195,23 @@ a.btn:hover{
     display: flex;
 }
 
+}
+.button-shop{
+    overflow:hidden;
+    width:100%;
+    max-weight:222%;
+    margin-right:auto;
+    margin-left:auto;
+    padding-top:15px;
+    padding-bottom: 17px;
+    background-color: #c43145;
+    -webkit-transition: all 555ms ease;
+    transition: all 555ms ease;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+ }
+.button-shop:hover{
+    background-color: #e99b04;
+}
+

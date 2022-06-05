@@ -36,8 +36,11 @@
 						</a>
 					</li>
 					<li>	
-						<a href="#">
+						<a class="basket" href="#">
 							<img src="{% static 'main/img/tiles3_hd.svg' %} ">
+							<div class="shop-nomber">
+								<div>0</div>
+							</div>
 						</a>
 					</li>
 					<li>
@@ -75,6 +78,49 @@
 		</div>
 	</header>
 	<section>
+		<div class="tovar"><a class="link-block-15 w-inline-block" href="#">
+
+					<img alt="" class="img-2" loading="lazy" src="{% static 'main/img/apple.png' %}" />
+						<div class="ratting"><img alt="" class="star" loading="lazy" src="images/star-oll.svg">
+						<img alt="" class="star" loading="lazy" src="images/star-oll.svg">
+							<img alt="" class="star" loading="lazy" src="images/star-oll.svg">
+						<img alt="" class="star last" loading="lazy" src="images/star-oll.svg"></div>
+					</a>
+					<div class="otz"><a class="link" href="#">7 отзывов</a></div>
+					<div class="title">Apple Watch 7</div>
+
+
+			<div class="product__price price"><span class="product__price-number">95 450</span> ₽</div>
+
+
+
+					<div class="w-form">
+						<form data-name="Email Form" id="email-form" method="post" action="mail.php" name="email-form">
+
+
+
+							<div class="product__size div-block-20-copy">
+							<div class="product__size-element radio-button w radio"
+							data-sb-curent-price="95450" data-sb-curent-size="38" data-sb-curent-id-or-vendor-code="038">38 мм</div>
+							<div class="product__size-element radio-button w radio"
+							data-sb-curent-price="105450" data-sb-curent-size="42" data-sb-curent-id-or-vendor-code="042">42 мм</div>
+							</div>
+
+
+
+							<div class="product__quantity"></div>
+
+						</form>
+					</div>
+								<a class="button-shop"
+								data-sb-id-or-vendor-code="038"
+  								data-sb-product-name="Apple Watch 7"
+							  	data-sb-product-price="95450"
+								data-sb-product-quantity="1"
+								data-sb-product-img="main/img/apple.png"
+								href="#" >Сделать покупку</a>
+
+		</div>
 		<div class="containers">
 			<div class="first-block">
 				<h2> Хиты продаж </h2>
@@ -138,10 +184,72 @@
 					</a>
 				</div>
 			</div>
+			<div class="second-block">
+				<h2> Новинки </h2>
+				<div class="new-top">
+					<a href="#">
+						<img class="sales-hits-top1" src="{% static 'main/img/genshin_raiden.jpg' %}">
+					</a>
+					<a href="#">
+						<img class="sales-hits-top2" src="{% static 'main/img/genshin_raiden.jpg' %}">
+					</a>
+					<a href="#">
+						<img class="sales-hits-top3" src="{% static 'main/img/genshin_raiden.jpg' %}">
+					</a>
+					<a href="#">
+						<img class="sales-hits-top4" src="{% static 'main/img/genshin_raiden.jpg' %}">
+					</a>
+				</div>
+				<div class="new-bottom">
+					<a href="#">
+						<img class="sales-hits-bottom1" src="{% static 'main/img/genshin_raiden.jpg' %}">
+					</a>
+					<a href="#">
+						<img class="sales-hits-bottom2" src="{% static 'main/img/genshin_raiden.jpg' %}">
+					</a>
+					<a href="#">
+						<img class="sales-hits-bottom3" src="{% static 'main/img/genshin_raiden.jpg' %}">
+					</a>
+					<a href="#">
+						<img class="sales-hits-bottom4" src="{% static 'main/img/genshin_raiden.jpg' %}">
+					</a>
+				</div>
+			</div>
 		</div>
 	</section>
 	<footer>
 		
 	</footer>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<link rel="stylesheet" href="{% static 'main/smartbasket/css/smartbasket.min.css'%}">
+
+<div class="smart-basket__wrapper"></div>
+
+<script src="{% static './main/smartbasket/js/smartbasket.min.js'%}"></script>
+
+	<script>
+		$(function () {
+			$('.smart-basket__wrapper').smbasket({
+				productElement: 'tovar',
+				buttonAddToBasket: 'button-shop',
+				productPrice: 'product__price-number',
+				productSize: 'product__size-element',
+
+				productQuantityWrapper: 'product__quantity',
+				smartBasketMinArea: 'basket',
+				countryCode: '+7',
+				smartBasketCurrency: '₽',
+				smartBasketMinIconPath: './smartbasket/img/shopping-basket-wight.svg',
+
+				agreement: {
+					isRequired: true,
+					isChecked: true,
+					isLink: 'https://artstranger.ru/privacy.html',
+				},
+				nameIsRequired: false,
+			});
+		});
+	</script>
 </body>
 </html>
