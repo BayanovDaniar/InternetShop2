@@ -2,6 +2,16 @@ from django.shortcuts import render
 from django.views.generic import DetailView
 from .models import Notebook, Smartphone, Category
 
+
+class CategoryDetailView(DetailView):
+
+    model = Category
+    queryset = Category.objects.all()
+    context_object_name = 'category'
+    template_name = 'Header_temp.html'
+    slug_url_kwarg = 'slug'
+
+
 class ProductDetailView(DetailView):
 
     CT_MODEL_MODEL_CLASS = {

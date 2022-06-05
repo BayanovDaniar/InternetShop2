@@ -9,7 +9,7 @@ import sys
 from django.urls import reverse
 
 
-def get_model_for_count(*model_names):
+def get_models_for_count(*model_names):
     return [models.Count(model_name)for model_name in model_names]
 
 
@@ -60,10 +60,13 @@ class CategoryManager(models.Manager):
         return super().get_queryset()
 
     def get_categories_for_slidebar(self):
-        models = get_model_for_count('notebook', 'smartphone')
-        qs = list(self.get_queryset().annotate(*models).values())
-        print(qs[0].notebook__count)
-        #return [dict(name=c['name']), slug=c['slug'], count = c[self.CATEGORY_NAME_COUNT_NAME[c['name']]])for c in qs]
+        models = get_models_for_count('notebook', 'smartphone')
+        qs = list(self.get_queryset().annotate(*models))
+        data = [
+            dict(name=c.name, url=c.get_absolute_url(), count=getattr(c, self.CATEGORY_NAME_COUNT_NAME[c.name]))
+            for c in qs
+        ]
+        return data
 
 
 class Category(models.Model):
@@ -74,6 +77,8 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+    def get_absolute_url(self):
+        return reverse('category_detail', kwargs={'slug' : self.slug})
 
 class Product(models.Model):
     MIN_RESOLUTION = (400, 400)
