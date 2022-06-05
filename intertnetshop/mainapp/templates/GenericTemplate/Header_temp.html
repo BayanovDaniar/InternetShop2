@@ -1,13 +1,19 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'productpage/css/product.css'%}">
 <div class="header-fixed">
-        <div class="nav">
+        <div class="dropdown">
             <button id="catalog-btn">
                 <img src="{% static 'main/img/tiles1_hd.svg' %}" alt="logo">
                     <p id="catalog-text">
 						Каталог
 					</p>
+
             </button>
+            <div class="dropdown-content">
+                <a href="#">Ссылка 1</a>
+                <a href="#">Ссылка 2</a>
+               <a href="#">Ссылка 3</a>
+            </div>
         </div>
 
         <div class="search">
