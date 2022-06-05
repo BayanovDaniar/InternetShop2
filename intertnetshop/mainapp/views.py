@@ -4,15 +4,18 @@ from .models import Notebook, Smartphone, Category
 from .mixins import CategoryDetailMixin
 
 
+class HomeView(View):
+    def get(self, reqiuest, *args, **kwargs):
+        return render(reqiuest, 'index.html')
+
+
 class BaseView(View):
-    def get(self,request, *args, **kwargs):
+    def get(self, request, *args, **kwargs):
         categories = Category.objects.get_categories_for_slidebar()
         return render(request, 'GenericTemplate/Header_temp.html', {'categories': categories})
 
 
-
 class CategoryDetailView(CategoryDetailMixin, DetailView):
-
     model = Category
     queryset = Category.objects.all()
     context_object_name = 'category'
@@ -21,7 +24,6 @@ class CategoryDetailView(CategoryDetailMixin, DetailView):
 
 
 class ProductDetailView(CategoryDetailMixin, DetailView):
-
     CT_MODEL_MODEL_CLASS = {
         'notebook': Notebook,
         'smartphone': Smartphone
