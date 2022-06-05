@@ -1,0 +1,44 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'productpage/css/product.css'%}">
+<div class="header-fixed">
+        <div class="nav">
+            <button id="catalog-btn">
+                <img src="{% static 'main/img/tiles1_hd.svg' %}" alt="logo">
+                    <p id="catalog-text">
+						Каталог
+					</p>
+            </button>
+        </div>
+
+        <div class="search">
+            <input name="search-string" placeholder="Искать товары" class="text-search">
+        </div>
+        <div class="menu-btn">
+            <div class="nav">
+                <a href="#">
+                    <img src="{% static 'main/img/home.svg' %}">
+                </a>
+            </div>
+            <div class="nav">
+                <a href="#">
+                    <img src="{% static 'main/img/tiles2_hd.svg' %}">
+                </a>
+            </div>
+            <div class="nav">
+                <a href="#">
+                    <img src="{% static 'main/img/tiles3_hd.svg' %} ">
+                </a>
+            </div>
+            <div class="nav">
+                <a href="#">
+                    <img src="{% static 'main/img/tiles4_hd.svg' %}">
+                </a>
+            </div>
+        </div>
+            <div class="phone">
+                <img src="{% static 'main/img/tiles5_hd.svg'%}">
+                <a class="tel" href="#">
+                    +8 (999) 30-694-05
+                </a>
+            </div>
+    </div>
