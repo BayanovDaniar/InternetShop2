@@ -25,116 +25,157 @@ body{
     border-radius: 14px;
 }
 
-.container-top-enter{
+.container-top-reg{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 59px;
-    padding-bottom: 21px;
+    padding-top: 40px;
     height: 38px;
 }
 
-.container-top-enter p{
+.container-top-reg p{
     color: #FFF;
     text-decoration: none;
     font-size: 20px;
-    padding-top: 59px;
     font-size: 20px;
 }
 
-.container-login{
+.container-first-name{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 14px;
     height: 47px;
-    padding-top: 21px;
 }
 
-.container-or{
+.container-second-name{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 12px;
-    height: 27px;
+    padding-top: 14px;
+    height: 47px;
+}
+
+input[type="text"]{
+    background-color: #20242A;
+    color: #FFF;
+    box-sizing: border-box;
+    border: 1px solid #FFF;
+    width: 365px;
+    height: 47px;
+    padding-left: 15px;
+    font-size: 15px;
+	background-color: #20242A;
 }
 
 .container-email{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 12px;
+    padding-top: 14px;
     height: 47px;
 }
 
-.container-password{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 12px;
-    height: 47px;
-}
-
-.container-bottom-enter{
-    display: flex;
-    items-align: center;
-    justify-content: center;
-    padding-top: 25px;
-    height: 47px;
-}
-
-.btn-google{
-    width: 365px;
-    height: 47px;
-    font-size: 15px;
-    background: #D9D9D9;
-    border-radius: 2px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.or{
+input[type="email"]{
+    background-color: #20242A;
     color: #FFF;
-    font-size: 14px;
-}
-
-.text-email{
-    color:#20242A;
     box-sizing: border-box;
     border: 1px solid #FFF;
     width: 365px;
     height: 47px;
     padding-left: 15px;
     font-size: 15px;
-    display: flex;
-	align-items: center;
-	justify-content: center;
 	background-color: #20242A;
 }
 
-.text-password{
+.container-first-password{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 14px;
+    height: 47px;
+}
+
+.container-second-password{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 14px;
+    height: 47px;
+}
+
+input[type="password"] {
+    background-color: #20242A;
+    color: #FFF;
     box-sizing: border-box;
-    background: #20242A;
     border: 1px solid #FFF;
     width: 365px;
     height: 47px;
     padding-left: 15px;
     font-size: 15px;
-    display: flex;
-	align-items: center;
-	justify-content: center;
 	background-color: #20242A;
 }
 
-.btn-enter{
+.container-bottom-done{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    height: 47px;
+}
+
+.text-bottom-done{
+    color: #FFF;
     box-sizing: border-box;
-    color: #2AC3D8;
+    border: 1px solid #FFF;
     width: 134px;
     height: 43px;
     font-size: 15px;
-    background: #20242A;
-    border: 1px solid #7AE7FF;
+	background: #20242A;
+    border-radius: 2px;
+}
+
+.container-have-account{
     display: flex;
-    align-items;
     justify-content: center;
+    align-items: center;
+    height: 23px;
+}
+
+.have-account{
+    font-size: 12px;
+    color: #A7A7A7;
+}
+
+.container-have-account a{
+    text-decoration:none;
+}
+
+
+
+
+input[type="text"]:hover{
+    border-color: #17D5FF;
+    transition: 0.4s linear;
+}
+
+input[type="password"]:hover{
+    border-color: #17D5FF;
+    transition: 0.4s linear;
+}
+
+input[type="email"]:hover{
+    border-color: #17D5FF;
+    transition: 0.4s linear;
+}
+
+input[class="text-bottom-done"]:hover{
+    color: #17D5FF;
+    border-color: #17D5FF;
+    transition: 0.4s linear;
+}
+
+a [class="have-account"]:hover{
+    color: #FFF;
+    transition: 0.4s linear;
 }
