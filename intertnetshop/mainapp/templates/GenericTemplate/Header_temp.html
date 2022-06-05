@@ -10,10 +10,9 @@
 
             </button>
             <div class="dropdown-content">
-<!--                {% for category in categories %}-->
-                <a href="{{category.url}}"> {{category.name}} ({{category.count}})</a>
-                <a href="{{category.url}}"> fwfwafwa</a>
-<!--                {% endfor %}-->
+                {% for category in categories%}
+                <a href="{{ category.url }}">{{category.name}} ({{category.count}})</a>
+                {% endfor%}
             </div>
         </div>
 

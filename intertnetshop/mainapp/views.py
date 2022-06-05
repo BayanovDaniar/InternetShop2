@@ -3,12 +3,17 @@ from django.views.generic import DetailView
 from .models import Notebook, Smartphone, Category
 
 
+def TestCategory(request):
+    categories = Category.objects.get_categories_for_slidebar()
+    return render(request, 'GenericTemplate/Header_temp.html', {'categories': categories})
+
+
 class CategoryDetailView(DetailView):
 
     model = Category
     queryset = Category.objects.all()
     context_object_name = 'category'
-    template_name = 'Header_temp.html'
+    template_name = 'category_detail.html'
     slug_url_kwarg = 'slug'
 
 
