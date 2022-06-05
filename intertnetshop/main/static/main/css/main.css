@@ -44,6 +44,16 @@ ul, li{
 	align-items: center;
 	text-decoration: none;
 	color: #FFF;
+}.btn{
+	background: #24B8D9;
+	width: 117px;
+	height: 46px;
+	margin-right: 24px;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	color: #FFF;
 }
 
 .btn img{
