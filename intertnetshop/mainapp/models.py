@@ -9,6 +9,10 @@ import sys
 from django.urls import reverse
 
 
+def get_models_for_count(*model_names):
+    return [models.Count(model_name)for model_name in model_names]
+
+
 def get_product_url(obj, viewname):
     ct_model = obj.__class__._meta.model_name
     return reverse(viewname, kwargs={'ct_model': ct_model, 'slug': obj.slug})
@@ -28,9 +32,9 @@ class LatestProductsManager:
     def get_products_for_main_page( *args, **kwargs):
         with_respect_to = kwargs.get('with_respect_to')
         products = []
-        ct_models = ContentType.objects.filters(model__in=args)
+        ct_models = ContentType.objects.filter(model__in=args)
         for ct_model in ct_models:
-            model_products = ct_model.model_class()._base_manager.all().order_by('-id')[:5]
+            model_products = ct_model.model_class()._base_manager.all().order_by('-id')[:6]
             products.extend(model_products)
         if with_respect_to:
             ct_model = ContentType.objects.filters(model = with_respect_to)
@@ -42,16 +46,39 @@ class LatestProductsManager:
 
 class LatestProducts:
 
-    object = LatestProductsManager()
+    objects = LatestProductsManager()
+
+
+class CategoryManager(models.Manager):
+
+    CATEGORY_NAME_COUNT_NAME = {
+        'Ноутбуки' : 'notebook__count',
+        'Смартфоны' : 'smartphone__count'
+    }
+
+    def get_queryset(self):
+        return super().get_queryset()
+
+    def get_categories_for_slidebar(self):
+        models = get_models_for_count('notebook', 'smartphone')
+        qs = list(self.get_queryset().annotate(*models))
+        data = [
+            dict(name=c.name, url=c.get_absolute_url(), count=getattr(c, self.CATEGORY_NAME_COUNT_NAME[c.name]))
+            for c in qs
+        ]
+        return data
 
 
 class Category(models.Model):
     name = models.CharField(max_length=255, verbose_name='Имя категории')
     slug = models.SlugField(unique=True)
+    objects = CategoryManager()
 
     def __str__(self):
         return self.name
 
+    def get_absolute_url(self):
+        return reverse('category_detail', kwargs={'slug' : self.slug})
 
 class Product(models.Model):
     MIN_RESOLUTION = (400, 400)
@@ -71,29 +98,31 @@ class Product(models.Model):
     def __str__(self):
         return self.title
 
-    def save(self, *args, **kwargs):
-        # image = self.image
-        # img = Image.open(image)
-        # min_height, min_width = Product.MIN_RESOLUTION
-        # max_height, max_width = Product.MAX_RESOLUTION
-        # if img.height > max_height or img.width > max_width:
-        #     raise MinResolutionErrorException("Загруженное изображение больше максимального!")
-        # if img.height < min_height or img.width < min_width:
-        #     raise MaxResolutionErrorException("Загруженное изображение меньше минимального!")
-        image = self.image
-        img = Image.open(image)
-        new_img = img.convert('RGB')
-        resized_new_img = new_img.resize((200, 200), Image.ANTIALIAS)
-        filestream = BytesIO()
-        resized_new_img.save(filestream, 'JPEG', quality=90)
-        filestream.seek(0)
-        name = '{}.{}'.format(*self.image.name.split('.'))
-        self.image = InMemoryUploadedFile(
-            filestream, 'ImageField', name, 'jpeg/image', sys.getsizeof(filestream), None
-        )
+    def get_model_name(self):
+        return self.__class__.__name__.lower()
 
-        super().save(*args, **kwargs)
-
+    # def save(self, *args, **kwargs):
+    #     # image = self.image
+    #     # img = Image.open(image)
+    #     # min_height, min_width = Product.MIN_RESOLUTION
+    #     # max_height, max_width = Product.MAX_RESOLUTION
+    #     # if img.height > max_height or img.width > max_width:
+    #     #     raise MinResolutionErrorException("Загруженное изображение больше максимального!")
+    #     # if img.height < min_height or img.width < min_width:
+    #     #     raise MaxResolutionErrorException("Загруженное изображение меньше минимального!")
+    #     image = self.image
+    #     img = Image.open(image)
+    #     new_img = img.convert('RGB')
+    #     resized_new_img = new_img.resize((200, 200), Image.ANTIALIAS)
+    #     filestream = BytesIO()
+    #     resized_new_img.save(filestream, 'JPEG', quality=90)
+    #     filestream.seek(0)
+    #     name = '{}.{}'.format(*self.image.name.split('.'))
+    #     self.image = InMemoryUploadedFile(
+    #         filestream, 'ImageField', name, 'jpeg/image', sys.getsizeof(filestream), None
+    # #     )
+    #
+    #     super().save(*args, **kwargs)
 
 
 class CartProduct(models.Model):

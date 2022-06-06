@@ -14,13 +14,13 @@
 </head>
 <body>
     <header>
-
+        {% include 'GenericTemplate/Header_temp.html'%}
     </header>
     <section class="main_information">
 
         <div class="pictures">
             <div class="main_picture">
-                <img style='height: 100%; width: 100%; object-fit: contain' src="{{product.image.url}}">
+                <img style='height: 100%; width: 100%; object-fit: contain' src='{{ product.image.url }}'>
             </div>
             <div class="picture_list">
 

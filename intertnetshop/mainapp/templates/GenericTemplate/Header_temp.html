@@ -1,13 +1,20 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'productpage/css/product.css'%}">
 <div class="header-fixed">
-        <div class="nav">
+        <div class="dropdown">
             <button id="catalog-btn">
                 <img src="{% static 'main/img/tiles1_hd.svg' %}" alt="logo">
                     <p id="catalog-text">
 						Каталог
 					</p>
+
             </button>
+            <div class="dropdown-content">
+                {% for category in categories%}
+                <a href="{{ category.url }}">{{category.name}} ({{category.count}})</a>
+                {% endfor%}
+                <a href="{{ category.url }}">Проверка</a>
+            </div>
         </div>
 
         <div class="search">
@@ -15,7 +22,7 @@
         </div>
         <div class="menu-btn">
             <div class="nav">
-                <a href="#">
+                <a href="http://127.0.0.1:8000/testhome">
                     <img src="{% static 'main/img/home.svg' %}">
                 </a>
             </div>
@@ -30,7 +37,7 @@
                 </a>
             </div>
             <div class="nav">
-                <a href="#">
+                <a href="http://127.0.0.1:8000/login">
                     <img src="{% static 'main/img/tiles4_hd.svg' %}">
                 </a>
             </div>
