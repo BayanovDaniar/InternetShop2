@@ -29,7 +29,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 40px;
+    padding-top: 14px;
     height: 38px;
 }
 
@@ -120,7 +120,7 @@ input[type="password"] {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 20px;
+    padding-top: 14px;
     height: 47px;
 }
 
@@ -139,6 +139,7 @@ input[type="password"] {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 5px;
     height: 23px;
 }
 
@@ -151,8 +152,22 @@ input[type="password"] {
     text-decoration:none;
 }
 
+.container-back-to-the-main-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+    height: 23px;
+}
 
+.back-to-the-main-page{
+    font-size: 12px;
+    color: #A7A7A7;
+}
 
+.container-back-to-the-main-page a{
+    text-decoration:none;
+}
 
 input[type="text"]:hover{
     border-color: #17D5FF;
@@ -176,6 +191,11 @@ input[class="text-bottom-done"]:hover{
 }
 
 a [class="have-account"]:hover{
+    color: #FFF;
+    transition: 0.4s linear;
+}
+
+a [class="back-to-the-main-page"]:hover{
     color: #FFF;
     transition: 0.4s linear;
 }

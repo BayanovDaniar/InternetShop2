@@ -133,6 +133,7 @@ input[type="password"] {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 5px;
     height: 23px;
 }
 
@@ -145,6 +146,7 @@ input[type="password"] {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 5px;
     height: 23px;
 }
 
