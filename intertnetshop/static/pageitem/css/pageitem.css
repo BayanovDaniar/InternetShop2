@@ -22,35 +22,53 @@ font-size: 25px;
 
 
 }
+.card-pic {
+ height: 50%;
+ width: 100%;
+ margin-bottom: 5%;
+}
+
+.item-pic {
+    padding-top: 2%;
+    width: auto;
+    height: 100%;
+    max-width: 350px;
+    max-height: 350px;
+
+}
+.textinfo {
+    height: 15%;
+}
 
 .box {
     padding-top: 150px;
-    width: 1170px;
-    display: flex;
-    justify-content: space-between;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     margin-left: auto;
     margin-right: auto;
+    grid-gap: 7.5%;
+    height: 100%;
 }
 
 .card {
-    position: relative;
+  position: relative;
   display: block;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   text-align: center;
-  width: 350px;
-  margin: 2% 2% 2% 2%;
-}
-.card:hover {
+  height: 80%;
+  max-height: 410px;
+  width: 90%;
+  margin: auto;
 }
 
 .price {
   color: grey;
-  font-size: 22px;
+  font-size: 25px;
 }
 
 .card button {
   border: none;
-  padding: 12px;
+  padding: 10px;
   color: white;
   background-color: white;
   text-align: center;

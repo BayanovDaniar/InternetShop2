@@ -15,13 +15,23 @@
 
     <section class="box">
         {% for product in category_products %}
-            <div class="card">
-                <img src="{{product.image.url}}" alt="Notebook" style="width:100%">
-                <a class="itemname" href="{{product.get_absolute_url}}"> {{product.title}} </a>
-                <p class="price"> {{product.price}} </p>
-                <p>Was presented in 2021 as a most powerful laptop of the year</p>
-                <button><<img class="cart" src="{% static 'pageitem/img/Cart.png'%}"></button>
-            </div>
+            <i class="card">
+                <div class="card-pic">
+                <img class="item-pic" src="{{product.image.url}}" style="object-fit: contain;" alt="Notebook">
+                 </div>
+                <div class="textinfo">
+                    <a class="itemname" href="{{product.get_absolute_url}}"> {{product.title}} </a>
+                </div>
+                <div class="textinfo">
+                    <p class="price"> {{product.price}} </p>
+                </div>
+                <div class="textinfo">
+                    <p>Was presented in 2021 as a most powerful laptop of the year</p>
+                </div>
+                <div class="textinfo">
+                    <button><<img class="cart" src="{% static 'pageitem/img/Cart.png'%}"></button>
+                </div>
+            </i>
         {%endfor%}
     </section>
 
