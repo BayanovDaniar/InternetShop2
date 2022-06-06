@@ -24,6 +24,7 @@ font-size: 25px;
 }
 
 .box {
+    padding-top: 150px;
     width: 1170px;
     display: flex;
     justify-content: space-between;

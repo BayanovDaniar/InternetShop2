@@ -98,6 +98,9 @@ class Product(models.Model):
     def __str__(self):
         return self.title
 
+    def get_model_name(self):
+        return self.__class__.__name__.lower()
+
     # def save(self, *args, **kwargs):
     #     # image = self.image
     #     # img = Image.open(image)

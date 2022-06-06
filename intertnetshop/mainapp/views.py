@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import DetailView, View
+from django.contrib.contenttypes.models import ContentType
 from .models import Notebook, Smartphone, Category, LatestProducts
 from .mixins import CategoryDetailMixin
 
@@ -9,9 +10,7 @@ class HomeView(View):
         products = LatestProducts.objects.get_products_for_main_page(
             'notebook', 'smartphone'
         )
-        for i in products:
-            print(i)
-        return render(reqiuest, 'index.html' , {'products': products})
+        return render(reqiuest, 'page_home/index.html', {'products': products})
 
 
 class BaseView(View):
@@ -22,11 +21,16 @@ class BaseView(View):
 
 
 class CategoryDetailView(CategoryDetailMixin, DetailView):
+
     model = Category
     queryset = Category.objects.all()
     context_object_name = 'category'
     template_name = 'category_detail.html'
     slug_url_kwarg = 'slug'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return context
 
 
 class ProductDetailView(CategoryDetailMixin, DetailView):
@@ -43,3 +47,8 @@ class ProductDetailView(CategoryDetailMixin, DetailView):
     context_object_name = 'product'
     template_name = 'product.html'
     slug_url_kwarg = 'slug'
+
+    def get_context_data(self, **kwargs):
+        context =super().get_context_data(**kwargs)
+        context['ct_model'] = self.model._meta.model_name
+        return context

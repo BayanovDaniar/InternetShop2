@@ -1,4 +1,5 @@
 {% load static %}
+{% load intorange%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,28 +12,18 @@
     <header>
         {% include 'GenericTemplate/Header_temp.html'%}
     </header>
+
     <section class="box">
-        <div class="card">
-            <img src="{% static 'pageitem/img/Note.jpg'%}" alt="Notebook" style="width:100%">
-            <p class="itemname" href="#">Honor Laptop</p>
-            <p class="price">$799.99</p>
-            <p>Was presented in 2021 as a most powerful laptop of the year</p>
-            <button><<img class="cart" src="{% static 'pageitem/img/Cart.png'%}"></button>
-        </div>
-        <div class="card">
-            <img src="{% static 'pageitem/img/Note.jpg'%}" alt="Notebook" style="width:100%">
-            <p class="itemname" href="#">Honor Laptop</p>
-            <p class="price">$799.99</p>
-            <p>Was presented in 2021 as a most powerful laptop of the year</p>
-            <button><<img class="cart" src="{% static 'pageitem/img/Cart.png'%}"></button>
-        </div>
-        <div class="card">
-            <img src="{% static 'pageitem/img/Note.jpg'%}" alt="Notebook" style="width:100%">
-            <p class="itemname" href="#">Honor Laptop</p>
-            <p class="price">$799.99</p>
-            <p>Was presented in 2021 as a most powerful laptop of the year</p>
-            <button><<img class="cart" src="{% static 'pageitem/img/Cart.png'%}"></button>
-        </div>
+        {% for product in category_products %}
+            <div class="card">
+                <img src="{{product.image.url}}" alt="Notebook" style="width:100%">
+                <a class="itemname" href="{{product.get_absolute_url}}"> {{product.title}} </a>
+                <p class="price"> {{product.price}} </p>
+                <p>Was presented in 2021 as a most powerful laptop of the year</p>
+                <button><<img class="cart" src="{% static 'pageitem/img/Cart.png'%}"></button>
+            </div>
+        {%endfor%}
     </section>
+
 </body>
 </html>
