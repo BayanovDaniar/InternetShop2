@@ -32,9 +32,9 @@ class LatestProductsManager:
     def get_products_for_main_page( *args, **kwargs):
         with_respect_to = kwargs.get('with_respect_to')
         products = []
-        ct_models = ContentType.objects.filters(model__in=args)
+        ct_models = ContentType.objects.filter(model__in=args)
         for ct_model in ct_models:
-            model_products = ct_model.model_class()._base_manager.all().order_by('-id')[:5]
+            model_products = ct_model.model_class()._base_manager.all().order_by('-id')[:6]
             products.extend(model_products)
         if with_respect_to:
             ct_model = ContentType.objects.filters(model = with_respect_to)
@@ -46,7 +46,7 @@ class LatestProductsManager:
 
 class LatestProducts:
 
-    object = LatestProductsManager()
+    objects = LatestProductsManager()
 
 
 class CategoryManager(models.Manager):
@@ -98,28 +98,28 @@ class Product(models.Model):
     def __str__(self):
         return self.title
 
-    def save(self, *args, **kwargs):
-        # image = self.image
-        # img = Image.open(image)
-        # min_height, min_width = Product.MIN_RESOLUTION
-        # max_height, max_width = Product.MAX_RESOLUTION
-        # if img.height > max_height or img.width > max_width:
-        #     raise MinResolutionErrorException("Загруженное изображение больше максимального!")
-        # if img.height < min_height or img.width < min_width:
-        #     raise MaxResolutionErrorException("Загруженное изображение меньше минимального!")
-        image = self.image
-        img = Image.open(image)
-        new_img = img.convert('RGB')
-        resized_new_img = new_img.resize((200, 200), Image.ANTIALIAS)
-        filestream = BytesIO()
-        resized_new_img.save(filestream, 'JPEG', quality=90)
-        filestream.seek(0)
-        name = '{}.{}'.format(*self.image.name.split('.'))
-        self.image = InMemoryUploadedFile(
-            filestream, 'ImageField', name, 'jpeg/image', sys.getsizeof(filestream), None
-        )
-
-        super().save(*args, **kwargs)
+    # def save(self, *args, **kwargs):
+    #     # image = self.image
+    #     # img = Image.open(image)
+    #     # min_height, min_width = Product.MIN_RESOLUTION
+    #     # max_height, max_width = Product.MAX_RESOLUTION
+    #     # if img.height > max_height or img.width > max_width:
+    #     #     raise MinResolutionErrorException("Загруженное изображение больше максимального!")
+    #     # if img.height < min_height or img.width < min_width:
+    #     #     raise MaxResolutionErrorException("Загруженное изображение меньше минимального!")
+    #     image = self.image
+    #     img = Image.open(image)
+    #     new_img = img.convert('RGB')
+    #     resized_new_img = new_img.resize((200, 200), Image.ANTIALIAS)
+    #     filestream = BytesIO()
+    #     resized_new_img.save(filestream, 'JPEG', quality=90)
+    #     filestream.seek(0)
+    #     name = '{}.{}'.format(*self.image.name.split('.'))
+    #     self.image = InMemoryUploadedFile(
+    #         filestream, 'ImageField', name, 'jpeg/image', sys.getsizeof(filestream), None
+    # #     )
+    #
+    #     super().save(*args, **kwargs)
 
 
 class CartProduct(models.Model):
