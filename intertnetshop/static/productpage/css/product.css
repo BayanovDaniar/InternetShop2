@@ -10,10 +10,11 @@ body{
 
 header {
     position: fixed;
-    height: 100px;
+    height: 80px;
     width: 100%;
     z-index: 1;
-    background-color: grey;
+    background-color: #161A21;
+    border-bottom: 1px solid #B2B3B4;
 
 }
 
@@ -25,7 +26,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: grey;
 }
 
 
@@ -89,7 +89,7 @@ header {
 .menu-btn {
     display: flex;
     justify-content: space-between;
-    width: 15%;
+    width: 12%;
 
 }
 
