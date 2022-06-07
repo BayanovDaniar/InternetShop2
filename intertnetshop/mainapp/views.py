@@ -7,10 +7,11 @@ from .mixins import CategoryDetailMixin
 
 class HomeView(View):
     def get(self, request, *args, **kwargs):
+        categories = Category.objects.get_categories_for_slidebar()
         products = LatestProducts.objects.get_products_for_main_page(
             'notebook', 'smartphone'
         )
-        return render(request, 'page_home/index.html', {'products': products})
+        return render(request, 'page_home/index.html', {'products': products, 'categories': categories})
 
 
 class BaseView(View):
