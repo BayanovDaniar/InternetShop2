@@ -12,16 +12,12 @@ ul, li{
 	display: block;
 }
 
-.header{
-	padding-top: 57px;
-	padding-bottom: 25px;
-	background-size: 1600px 725px;
-	background-color: #181E27;
-}
+
 
 .container{
 	width: 1170px;
 	margin: 0 auto;
+	padding-top: 5%;
 }
 
 .nav{
@@ -30,81 +26,17 @@ ul, li{
 	height: 46px;
 }
 
-.menu{
-	display: flex;
-}
 
-.btn{
-	background: #24B8D9;
-	width: 117px;
-	height: 46px;
-	margin-right: 24px;
-	border-radius: 5px;
-	display: flex;
-	align-items: center;
-	text-decoration: none;
-	color: #FFF;
-}.btn{
-	background: #24B8D9;
-	width: 117px;
-	height: 46px;
-	margin-right: 24px;
-	border-radius: 5px;
-	display: flex;
-	align-items: center;
-	text-decoration: none;
-	color: #FFF;
-}
 
-.btn img{
-	margin-left: 9px;
-	margin-right: 5px;
-}
 
-.search{
-	display: flex;
-    align-items: center;
-}
 
-.text-search{
-    box-sizing: border-box;
-    background: #20242A;
-    border: 1px solid #B2B3B4;
-    width: 360px;
-    height: 36px;
-    padding-left: 15px;
-    font-size: 15px;
-}
 
-.search p{
-	margin-left: 10px;
-}
 
-.menu li{
-	margin-right: 23px;
-}
 
-.tel{
-	color: #FFF;
-	text-decoration: none;
-	margin-left: 13px;
-}
 
-.phone{
-	margin-left:  auto;
-	display: flex;
-	align-items: center;
-}
 
-a.tel:hover{
-	color: #7AE7FF;
-	transition: 0.8s;
-}
 
-a.btn:hover{
-	color: #7AE7FF;
-	transition: 0.8s;
-}
+
 
 
 

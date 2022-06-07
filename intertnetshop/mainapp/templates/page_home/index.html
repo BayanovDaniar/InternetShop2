@@ -13,46 +13,14 @@
 	<link rel="stylesheet" href="{% static 'main/css/main.css'%}">
 </head>
 <body>
-	<header class="header">
+	<header>
+		{% include 'GenericTemplate/Header_temp.html'%}
+	</header>
+	<section>
 		<div class="container">
 			<div class="nav">
-				<a href="#" class="btn">
-					<img src="{% static 'main/img/tiles1_hd.svg' %}" alt="logo">
-					<p class="catalog">
-						Каталог
-					</p>
-				</a>
-				<div class="search">
-                    <p><input name="search-string" placeholder="Искать товары" class="text-search"></p>
-                </div>
-				<ul class="menu">
-					<li>
-						<a href="http://127.0.0.1:8000/testhome">
-							<img src="{% static 'main/img/home.svg' %}">
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<img src="{% static 'main/img/tiles2_hd.svg' %}">
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<img src="{% static 'main/img/tiles3_hd.svg' %} ">
-						</a>
-					</li>
-					<li>
-						<a href="http://127.0.0.1:8000/login">
-							<img src="{% static 'main/img/tiles4_hd.svg' %}">
-						</a>
-					</li>
-				</ul>
-				<div class="phone">
-					<img src="{% static 'main/img/tiles5_hd.svg'%}">
-					<a class="tel" href="#">
-						+8 (999) 30-694-05
-					</a>
-				</div>
+
+
 			</div>
 			<div class="block">
 				<div class="img_left_center">
@@ -74,8 +42,6 @@
 				</div>
 			</div>
 		</div>
-	</header>
-	<section>
 		<div class="containers">
 			<div class="first-block">
 				<h2> Хиты продаж </h2>

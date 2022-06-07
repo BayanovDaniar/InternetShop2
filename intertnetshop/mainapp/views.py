@@ -6,11 +6,11 @@ from .mixins import CategoryDetailMixin
 
 
 class HomeView(View):
-    def get(self, reqiuest, *args, **kwargs):
+    def get(self, request, *args, **kwargs):
         products = LatestProducts.objects.get_products_for_main_page(
             'notebook', 'smartphone'
         )
-        return render(reqiuest, 'page_home/index.html', {'products': products})
+        return render(request, 'page_home/index.html', {'products': products})
 
 
 class BaseView(View):
