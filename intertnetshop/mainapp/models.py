@@ -8,7 +8,6 @@ from django.core.files.uploadedfile import InMemoryUploadedFile
 import sys
 from django.urls import reverse
 
-
 def get_models_for_count(*model_names):
     return [models.Count(model_name)for model_name in model_names]
 
@@ -115,12 +114,12 @@ class Product(models.Model):
     #     new_img = img.convert('RGB')
     #     resized_new_img = new_img.resize((200, 200), Image.ANTIALIAS)
     #     filestream = BytesIO()
-    #     resized_new_img.save(filestream, 'JPEG', quality=90)
+    #     resized_new_img.save(filestream, 'PNG', quality=90)
     #     filestream.seek(0)
     #     name = '{}.{}'.format(*self.image.name.split('.'))
     #     self.image = InMemoryUploadedFile(
-    #         filestream, 'ImageField', name, 'jpeg/image', sys.getsizeof(filestream), None
-    # #     )
+    #         filestream, 'ImageField', name, 'png/image', sys.getsizeof(filestream), None
+    #      )
     #
     #     super().save(*args, **kwargs)
 
